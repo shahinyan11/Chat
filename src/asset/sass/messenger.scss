@@ -1,0 +1,616 @@
+@import 'colors';
+
+#messenger {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  min-height: 100vh;
+
+  & .title {
+    color: hsla(0, 0%, 90%, 1);
+  }
+
+  & .my_left_bar {
+    width: 250px;
+
+    & .list_users {
+      display: flex;
+      flex-direction: column;
+      padding-left: 15px;
+      background-color: hsla(220, 5%, 10%, 1);
+      border-bottom: 54px solid hsla(220, 5%, 10%, 1);
+      border-top: 20px solid hsla(200, 6%, 9%, 1);
+
+      & .online_users {
+        & ul {
+          & li {
+            padding: 2px 15px 2px 5px;
+          }
+        }
+      }
+
+      & .findUser {
+        background-color: hsla(0, 0%, 23%, 1);
+        margin-right: 15px;
+
+        & input {
+          background-color: hsla(0, 0%, 23%, 1);
+          border: 0;
+          padding: 0;
+          display: flex;
+          flex: 1;
+          color: white;
+
+          &:focus {
+            box-shadow: none;
+          }
+        }
+      }
+
+      & .call_icons {
+        display: flex;
+      }
+
+      & .title {
+        padding: 10px;
+        background-color: hsla(210, 5%, 13%, 1);
+      }
+
+      & .figure {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      & .find_friends {
+        flex: 1;
+        padding-left: 15px;
+
+        & b {
+          display: block;
+          margin-bottom: 30px;
+          margin-top: 20px;
+        }
+
+        & p {
+          & span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  & .my_content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: hsla(210, 5%, 13%, 1);
+
+    overflow: hidden;
+
+    & * {
+      color: hsla(0, 0%, 50%, 1);
+    }
+
+    & > div {
+      padding: 0 15px;
+    }
+
+    & .contentTop {
+      background-color: hsla(195, 10%, 10%, 1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+
+      & ul {
+        width: 100%;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+
+        & li {
+          width: inherit;
+          margin-right: 15px;
+          display: flex;
+          align-items: center;
+        }
+
+        & div {
+          width: 100%;
+          float: right;
+        }
+
+        & span {
+          float: right;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    & .user_call {
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        & > div {
+          width: 100%;
+          max-width: 200px;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+        }
+      }
+
+      & .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsla(80, 53%, 39%, 1);
+        margin: 10px 0;
+      }
+
+      & .icon_text {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+      }
+
+      & .icon.calling {
+        background-color: red;
+      }
+    }
+
+    //& .post_item{
+    //  padding: 20px 5px;
+    //  max-height: 1500px;
+    //}
+
+    & .my_image_content {
+      width: 100%;
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    & .message_bord {
+      background-color: hsla(210, 5%, 13%, 1);
+      padding: 0 15px;;
+      //height: calc(100% - 50px);
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+
+      & .message_item.right, & .message_item.left {
+        width: 100%;
+        margin: 15px 0;
+
+        & > div {
+          width: calc(100% - 70px);
+
+          & > img {
+            width: 100%;
+          }
+        }
+
+        & > img {
+          width: 60%;
+        }
+
+        & > .file_icon {
+          width: 20%;
+        }
+
+      }
+
+      & .message_item.center {
+        width: 100%;
+        background-color: hsla(216, 8%, 11%, 1);
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px 0;
+        padding: 10px 10px;
+
+        & > div {
+          & * {
+            margin: 0 5px;
+          }
+        }
+      }
+
+      & .message {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        & div.imageItem {
+          //position: relative;
+          //width: 32%;
+          //height: 200px;
+          //overflow: hidden;
+          margin: 0.5%;
+
+          & img {
+            //position: absolute;
+            //top: 50%;
+            //left: 50%;
+            //transform: translate(-50%, -50%);
+            //min-width: 100%;
+            //min-height: 100%;
+            //max-width: 100%;
+            //max-height: none;
+            //width: auto;
+            //height: auto;
+            height: 200px;
+          }
+        }
+      }
+
+      & .left {
+        display: flex;
+        flex-direction: column;
+
+        & > div {
+          display: flex;
+          flex-direction: column;
+        }
+
+        & .message {
+          background-color: hsla(195, 8%, 9%, 1);
+        }
+
+        & .triangle {
+          width: 1px;
+          border: 7px solid transparent;
+          border-top: 15px solid hsla(195, 8%, 9%, 1);
+        }
+
+        & .imagesContent {
+          & .message {
+            background-color: hsla(210, 5%, 13%, 1);
+          }
+        }
+
+        & .bottom {
+          & .time {
+            margin-right: 10px
+          }
+        }
+      }
+
+      & .right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        & > div {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+        }
+
+        & .message {
+          background-color: hsla(216, 5%, 17%, 1);
+        }
+
+        & .triangle {
+          display: flex;
+          order: -1;
+          width: 1px;
+          border: 7px solid transparent;
+          border-top: 15px solid hsla(216, 5%, 17%, 1);
+        }
+
+        & .order {
+          order: -1;
+        }
+
+        & .imagesContent {
+          & .message {
+            justify-content: flex-end;
+            background-color: hsla(210, 5%, 13%, 1);
+          }
+
+          & .bottom {
+            justify-content: flex-end;
+
+          }
+        }
+
+        & .time {
+          margin-left: 10px
+        }
+      }
+
+      & .imagesContent {
+        width: 100%;
+        padding: 10px 10px;
+      }
+
+      & .textContent {
+        width: max-content;
+        padding: 10px 10px;
+
+        & .message {
+          padding: 10px 10px;
+        }
+      }
+
+      & .bottom {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+      }
+    }
+
+    & .send_bord {
+      height: 54px;
+      padding: 10px 0;
+
+      & form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        //border: 10px solid hsla(210, 5%, 13%, 1);
+        background-color: hsla(216, 4%, 21%, 1);
+
+        & .file_input {
+          display: none;
+        }
+
+        & label {
+          margin: 0
+        }
+
+        & > * {
+          background-color: hsla(216, 4%, 21%, 1);
+          padding: 0 8px;
+        }
+
+        & .message {
+          height: 100%;
+          display: flex;
+          flex-grow: 1;
+          border-right-style: solid;
+          border-right-width: 3px;
+          border-right-color: hsla(210, 5%, 13%, 1);
+          border-left-style: solid;
+          border-left-width: 3px;
+          border-left-color: hsla(210, 5%, 13%, 1);
+
+          & input {
+            width: 100%;
+            margin: 0 5px;
+            padding: 0 5px;
+            background-color: hsla(216, 4%, 21%, 1);
+            border: 0;
+          }
+        }
+
+        & .send_icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        & button {
+          border: 0;
+        }
+
+      }
+    }
+
+    & .MakeMessage {
+      & .reviewImages {
+        display: flex;
+
+        & > div {
+          position: relative;
+          border: 2px solid hsla(210, 5%, 13%, 1);
+
+          & img.close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  & .my_right_bar {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    & > .top {
+      position: absolute;
+      bottom: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      //width: 100%;
+      min-height: 60px;
+      padding-right: 5%;
+      right: 0;
+      //background-color: hsla(210, 5%, 15%, 1);
+
+      & > div {
+        width: 50px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+
+      & > div.active {
+        background-color: hsla(216, 8%, 11%, 1);
+      }
+    }
+
+    & .center {
+      overflow: hidden;
+      padding: 0 10px;
+      margin-top: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      & .photos {
+        overflow: auto;
+        width: 100%;
+        flex: 1;
+      }
+
+      & .my-gallery-class {
+        & .image-element-class {
+          & img {
+            width: 150px;
+            border: 2px solid hsla(216, 8%, 11%, 1);
+            display: block;
+            cursor: pointer;
+          }
+        }
+
+
+      }
+
+      //& .galleryItem {
+      //    margin: 0;
+      //    padding: 0;
+      //
+      //    & img {
+      //        height: 50px;
+      //        width: 100%;
+      //    }
+      //}
+
+      & .online_users {
+        & .UserModal {
+          top: 15px;
+          left: -7px;
+        }
+      }
+    }
+
+    & .bottom {
+      padding: 10px 20px 10px 10px;
+      width: 100%;
+
+      & .FindUser {
+        width: 100%;
+
+        & .btn-outline-dark {
+          margin: 0;
+          padding-right: 15px;
+          background-color: hsla(216, 4%, 21%, 1);
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border: 0;
+          color: white;
+          border-radius: 0;
+
+          &:focus {
+            box-shadow: none;
+          }
+        }
+
+        &.active {
+          background-color: green;
+
+          & .text {
+            color: white !important;
+          }
+
+          & .btn-outline-dark {
+            background-color: green;
+          }
+        }
+      }
+
+      & p {
+        margin: 0;
+        height: 40px;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    & .bottom {
+      padding: 10px 20px 10px 10px;
+      width: 100%;
+
+      & .FindUser {
+        width: 100%;
+
+        & .btn-outline-dark {
+          margin: 0;
+          padding-right: 15px;
+          background-color: hsla(216, 4%, 21%, 1);
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border: 0;
+          color: white;
+          border-radius: 0;
+
+          &:focus {
+            box-shadow: none;
+          }
+        }
+
+        &.active {
+          background-color: green;
+
+          & .text {
+            color: white !important;
+          }
+
+          & .btn-outline-dark {
+            background-color: green;
+          }
+        }
+      }
+
+      & p {
+        margin: 0;
+        height: 40px;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

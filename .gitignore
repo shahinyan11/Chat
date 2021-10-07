@@ -1,0 +1,14 @@
+/node_modules
+/.idea
+npm-debug.log
+yarn-error.log
+/package-lock.json
+src/.idea/
+/yarn.lock
+/public/mix-manifest.json
+/public/css/app.css
+/build
+/mix-manifest.json
+public/js/
+/public/js/
+/.env.development

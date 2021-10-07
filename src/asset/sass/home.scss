@@ -1,0 +1,212 @@
+@import 'colors';
+
+#home {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  min-height: 100vh;
+  & .title {
+    color: hsla(0, 0%, 77%, 1);
+  }
+
+  & .my_left_bar {
+
+    width: 250px;
+
+    & .sub_menu {
+      background-color: hsla(195, 8%, 9%, 1);
+      padding: 0 0 0 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      & form.text {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        & .logOut {
+          background-color: hsla(0, 100%, 26%, 1);
+          border: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          & .icon {
+            height: 20px;
+            width: 20px;
+            margin-left: 5px;
+            background-image: url("/images/icons/logout.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+
+          }
+
+          &:hover {
+            & b {
+              color: white;
+            }
+
+            & .icon {
+              background-image: url("/images/icons/logout_hover.svg");
+            }
+          }
+
+          &:focus {
+            & * {
+              border: 0
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  & .my_container {
+    position: relative;
+    background-color: hsla(210, 5%, 13%, 1);
+    display: flex;
+    flex: 1;
+  }
+
+  & .my_right_bar {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & > .top {
+      display: flex;
+      align-items: flex-end;
+      width: 100%;
+      min-height: 60px;
+      background-color: hsla(0, 0%, 23%, 1);
+
+      & > div {
+        width: 50px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+
+      & > div.active {
+        background-color: hsla(216, 8%, 11%, 1);
+      }
+    }
+
+    & .center {
+      overflow: hidden;
+      padding: 0 10px 10px 10px;
+      margin-top: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      & .ProfileSettings, .ProfileAvatarUpload {
+        & .modal-dialog {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+        }
+
+        & .modal-content {
+          background-color: hsla(216, 8%, 11%, 1);
+          width: 250px;
+          padding: 10px;
+          border: 0;
+
+          & .modal-body {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            & .text {
+              font-size: 10px;
+              max-width: 100px;
+              text-align: center
+            }
+
+            & > div {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+
+            & .sex {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              margin-top: 15px;
+
+              & b {
+                margin-right: 10px;
+              }
+
+              & div {
+                & label {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin: 0 5px;
+                  font-size: 10px;
+
+                  & input {
+                    margin-right: 5px;
+                  }
+                }
+
+              }
+            }
+          }
+
+          & .popup_avatar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            height: 120px;
+            padding-bottom: 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            position: relative;
+
+            & img {
+              max-width: 100%;
+              max-height: 100%;
+              width: 90%;
+              height: 90%;
+              border-radius: 50%;
+              border: 5px solid black;
+            }
+
+            & .icon {
+              position: absolute;
+              height: 20px;
+              width: 20px
+            }
+
+            & .icon_left {
+              bottom: 10%;
+              left: 0;
+              border: 0;
+            }
+
+            & .icon_right {
+              bottom: 10%;
+              right: 0;
+              border: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.react-draggable{z-index: 9999;border: 2px solid #645cff;border-bottom: none;}
+.react-draggable .user-video {
+    width: 100%;
+    height: -webkit-fill-available;
+    object-fit: cover;
+    position: relative;
+}
+.react-draggable .tools{border: 2px solid #645cff;margin-top: -8px; border-top: none;display: flex; width: inherit;margin-left: -2px;}
+.react-draggable div .my-video { border: 2px solid #645cff;z-index: 76;object-fit: cover;width: 200px;height: 125px;position: absolute;left: 0;bottom: 0;}
+.user_call {
+    width: 100%;
+    text-align: right;
+    justify-content: right;
+    max-width: 90%;
+    display: grid;
+    margin: auto;
+}
+.avatar{margin: 6px 0;}
+/* - */
+.imageItem, .image-element-class{cursor: pointer;}
